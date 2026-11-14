@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ishwari – Resume</title>
+<style>
+:root{
+  --red:#c8102e;
+  --red-dark:#8f0b20;
+  --red-tint:#fdecee;
+  --white:#ffffff;
+  --ink:#2b1114;
+  --muted:#6e4a4f;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--white:#ffffff;--ink:#2b1114;--muted:#6e4a4f;--red-tint:#fdecee}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--white);color:var(--ink);line-height:1.7;font-size:17px}
+h1,h2,h3,.sans{font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif}
+a{color:inherit}
+
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* Hero */
+header{background:var(--red);color:#fff}
+.hero{display:flex;align-items:center;gap:40px;padding:64px 24px;max-width:960px;margin:0 auto}
+.photo{flex:0 0 190px;width:190px;height:190px;border-radius:50%;border:6px solid #fff;background:#fff;color:var(--red);display:flex;align-items:center;justify-content:center;font:700 72px "Trebuchet MS",Arial,sans-serif;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.1;letter-spacing:-.5px}
+.hero p{margin-top:10px;font-size:1.15rem;max-width:46ch;color:#ffe3e7}
+nav{background:var(--red-dark)}
+nav .wrap{display:flex;flex-wrap:wrap;gap:4px 22px;padding-top:12px;padding-bottom:12px}
+nav a{color:#fff;text-decoration:none;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.95rem;padding:2px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a:focus-visible{border-bottom-color:#fff;outline:none}
+
+/* Sections */
+section{padding:56px 0;border-bottom:1px solid var(--red-tint)}
+section h2{color:var(--red);font-size:1.9rem;margin-bottom:22px;display:inline-block;border-bottom:4px solid var(--red);padding-bottom:4px}
+.about p{max-width:68ch}
+
+.entry{border-left:4px solid var(--red);padding:2px 0 2px 20px;margin-bottom:28px}
+.entry h3{font-size:1.15rem;color:var(--ink)}
+.entry .when{font-family:"Trebuchet MS",Arial,sans-serif;color:var(--red);font-size:.92rem;font-weight:700}
+.entry .where{color:var(--muted);font-style:italic}
+.entry ul{margin:8px 0 0 20px}
+.entry li{margin-bottom:4px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.box{background:var(--red-tint);border-top:4px solid var(--red);padding:20px 22px}
+.box h3{color:var(--red-dark);margin-bottom:8px;font-size:1.1rem}
+.box ul{margin-left:20px}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+.chips li{border:2px solid var(--red);color:var(--red);padding:5px 16px;border-radius:999px;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.95rem}
+.chips li.filled{background:var(--red);color:#fff}
+
+.lang{display:grid;grid-template-columns:140px 1fr auto;align-items:center;gap:14px;margin-bottom:12px;max-width:520px;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.95rem}
+.bar{height:10px;background:var(--red-tint);border-radius:5px;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--red)}
+.lang em{color:var(--muted);font-style:normal;font-size:.85rem}
+
+/* Contact */
+#contact{background:var(--red);color:#fff;border:none}
+#contact h2{color:#fff;border-bottom-color:#fff}
+.contact-list{list-style:none;display:grid;gap:10px;font-family:"Trebuchet MS",Arial,sans-serif}
+.contact-list b{display:inline-block;min-width:90px;color:#ffd3d9}
+.contact-list a{text-decoration:underline;text-underline-offset:3px}
+footer{background:var(--red-dark);color:#ffd3d9;text-align:center;padding:18px 24px;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.85rem}
+
+a:focus-visible{outline:3px solid #000;outline-offset:3px}
+
+@media (max-width:640px){
+  .hero{flex-direction:column;text-align:center;padding:44px 24px}
+  .lang{grid-template-columns:100px 1fr}
+  .lang em{grid-column:1 / -1;margin-top:-8px}
+}
+@media print{nav{display:none}section{padding:28px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <!-- To use your own photo, replace the letter below with: <img src="your-photo.jpg" alt="Photo of Ishwari"> -->
+    <div class="photo" role="img" aria-label="Photo of Ishwari">I</div>
+    <div>
+      <h1>Ishwari</h1>
+      <p>Motivated and curious college student who enjoys learning new skills, working in teams and turning ideas into results.</p>
+    </div>
+  </div>
+  <nav aria-label="Sections">
+    <div class="wrap">
+      <a href="#about">About me</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#activities">Activities</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#languages">Languages</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2>About me</h2>
+      <p>I am a dedicated and hard-working student with a strong interest in learning and problem solving. I communicate clearly, take responsibility for my work and enjoy collaborating with others. I am looking for an opportunity where I can grow my skills and make a real contribution.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="entry">
+        <span class="when">2026 – 2029</span>
+        <h3>Bachelor’s Degree in Digital Business and Entrepreneurship</h3>
+        <div class="where">Indian Institute of Management, Bangalore</div>
+        
+      </div>
+      <div class="entry">
+        <span class="when">2026 – 2029</span>
+        <h3>Bachelor’s Degree in E-commerce Operations</h3>
+        <div class="where">Brihan Maharashtra College of Commerce, Pune</div>
+         </div>
+      <div class="entry">
+        <span class="when">2024 – 2026</span>
+        <h3>Higher Secondary (Class XII)</h3>
+        <div class="where">Mes Garware College of Commerce, Pune</div>
+        <ul><li>Commerce 89%</li></ul>
+      </div>
+      <div class="entry">
+        <span class="when">Up to 2024</span>
+        <h3>Secondary School (Class X)</h3>
+        <div class="where">Hume McHenry School, Pune</div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section id="activities">
+    <div class="wrap">
+      <h2>Activities</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>College Clubs</h3>
+          <ul><li>Member of Research and Content Department</li><li>Entrepreneurship Development Cell, BMCC, Pune</li></ul>
+        </div>
+        <div class="box">
+          <h3>Personal Project</h3>
+          <ul><li>Content Writing on LinkedIn</li><li>Building a Personal brand</li></ul>
+        </div>
+        <div class="box">
+          <h3>Competitions</h3>
+          <ul><li>Won a city level management maestro competition organised by a coaching class</li><li>Participated in a National level Case Competition</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <div class="wrap">
+      <h2>Hobbies</h2>
+      <ul class="chips">
+        <li class="filled">Reading</li>
+        <li>Dancing</li>
+        <li class="filled">Music</li>
+        <li>Travelling</li>
+        <li class="filled">Cooking</li>
+        <li>Writing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="languages">
+    <div class="wrap">
+      <h2>Languages</h2>
+      <div class="lang"><span>English</span><div class="bar"><span style="width:90%"></span></div><em>Fluent</em></div>
+      <div class="lang"><span>Marathi</span><div class="bar"><span style="width:100%"></span></div><em>Native</em></div>
+      <div class="lang"><span>Hindi</span><div class="bar"><span style="width:80%"></span></div><em>Proficient</em></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><b>Email</b> <a href="mailto:ishwari@example.com">ishwaribomble13@gmail.com</a></li>
+        
+        <li><b>Location</b> Pune, India</li>
+        <li><b>LinkedIn</b> https://www.linkedin.com/in/ishwari-b-a7b364383/</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>© Ishwari · Resume</footer>
+
+</body>
+</html>
