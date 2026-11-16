@@ -3,131 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ishwari – Resume</title>
-<style>
-:root{
-  --red:#c8102e;
-  --red-dark:#8f0b20;
-  --red-tint:#fdecee;
-  --burg:#5c0f26;
-  --burg-dark:#3f0a1a;
-  --red-light:#ff5a73;
-  --white:#ffffff;
-  --ink:#2b1114;
-  --muted:#6e4a4f;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){--white:#ffffff;--ink:#2b1114;--muted:#6e4a4f;--red-tint:#fdecee}
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{font-family:Georgia,"Times New Roman",serif;background:var(--white);color:var(--ink);line-height:1.7;font-size:17px}
-h1,h2,h3,.sans{font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif}
-a{color:inherit}
-
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-
-/* Hero */
-header{background:var(--burg);color:#fff}
-.hero{display:flex;align-items:center;gap:40px;padding:64px 24px;max-width:960px;margin:0 auto}
-.photo{flex:0 0 190px;width:190px;height:190px;border-radius:50%;border:6px solid #fff;background:#fff;color:var(--red);display:flex;align-items:center;justify-content:center;font:700 72px "Trebuchet MS",Arial,sans-serif;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover}
-.hero h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.1;letter-spacing:-.5px}
-.hero p{margin-top:10px;font-size:1.15rem;max-width:46ch;color:#ffe3e7}
-nav{background:var(--burg-dark)}
-nav .wrap{display:flex;flex-wrap:wrap;gap:4px 22px;padding-top:12px;padding-bottom:12px}
-nav a{color:#fff;text-decoration:none;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.95rem;padding:2px 0;border-bottom:2px solid transparent}
-nav a:hover,nav a:focus-visible{border-bottom-color:#fff;outline:none}
-
-/* Sections */
-section{padding:56px 0;border-bottom:1px solid var(--red-tint)}
-section h2{color:var(--burg);font-size:1.9rem;margin-bottom:22px;display:inline-block;border-bottom:4px solid var(--red);padding-bottom:4px}
-.about p{max-width:68ch}
-
-.entry{border-left:4px solid var(--red);padding:8px 14px 8px 20px;margin-bottom:28px;transition:transform .2s,box-shadow .2s,background .2s}
-.entry:hover{transform:translateY(-6px);box-shadow:0 14px 24px rgba(200,16,46,.18);background:var(--red-tint)}
-.entry h3{font-size:1.15rem;color:var(--ink)}
-.entry .when{font-family:"Trebuchet MS",Arial,sans-serif;color:var(--red);font-size:.92rem;font-weight:700}
-.entry .where{color:var(--muted);font-style:italic}
-.entry ul{margin:8px 0 0 20px}
-.entry li{margin-bottom:4px}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.box{background:var(--red-tint);border-top:4px solid var(--red);padding:20px 22px;transition:transform .2s,box-shadow .2s}
-.box:hover{transform:translateY(-6px);box-shadow:0 14px 24px rgba(200,16,46,.18)}
-.box h3{color:var(--burg);margin-bottom:8px;font-size:1.1rem}
-.box ul{margin-left:20px}
-
-.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
-.chips li{border:2px solid var(--burg);color:var(--burg);padding:5px 16px;border-radius:999px;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.95rem;transition:transform .2s,background .2s,color .2s}
-.chips li:hover{transform:scale(1.1);background:var(--burg);color:#fff}
-.chips li.filled{background:var(--red);color:#fff}
-
-.lang{display:grid;grid-template-columns:140px 1fr auto;align-items:center;gap:14px;margin-bottom:12px;max-width:520px;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.95rem}
-.bar{height:10px;background:var(--red-tint);border-radius:5px;overflow:hidden}
-.bar span{display:block;height:100%;background:var(--red);width:0;transition:width 1.2s ease}
-.lang em{color:var(--muted);font-style:normal;font-size:.85rem}
-
-/* Contact */
-#contact{background:var(--burg);color:#fff;border:none}
-#contact h2{color:#fff;border-bottom-color:#fff}
-.contact-list{list-style:none;display:grid;gap:10px;font-family:"Trebuchet MS",Arial,sans-serif}
-.contact-list b{display:inline-block;min-width:90px;color:#ffd3d9}
-.contact-list a{text-decoration:underline;text-underline-offset:3px}
-footer{background:var(--burg-dark);color:#ffd3d9;text-align:center;padding:18px 24px;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.85rem}
-
-a:focus-visible{outline:3px solid #000;outline-offset:3px}
-
-@media (max-width:640px){
-  .hero{flex-direction:column;text-align:center;padding:44px 24px}
-  .lang{grid-template-columns:100px 1fr}
-  .lang em{grid-column:1 / -1;margin-top:-8px}
-}
-@media print{nav{display:none}section{padding:28px 0}}
-
-  /* Side name and section dots (wide screens only) */
-.side-name,.side-dots{display:none}
-@media (min-width:1150px){
-  .side-name{display:flex;flex-direction:column;align-items:center;gap:14px;position:fixed;left:20px;top:50%;transform:translateY(-50%);z-index:15;pointer-events:none}
-  .side-name::before,.side-name::after{content:"";width:2px;height:70px;background:#ff5a73;border-radius:2px}
-  .side-name span{writing-mode:vertical-rl;transform:rotate(180deg);font-family:"Poppins","Trebuchet MS",Arial,sans-serif;font-weight:800;font-size:15px;letter-spacing:4px;color:#ff5a73}
-  .side-dots{display:flex;flex-direction:column;gap:14px;position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:15}
-  .side-dots a{width:12px;height:12px;border-radius:50%;border:2px solid #ff5a73;transition:background .2s,transform .2s}
-  .side-dots a:hover{transform:scale(1.3)}
-  .side-dots a.active{background:#ff5a73}
-}
-  /* ===== SPARKLES ===== */
-:root{--star:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%)}
-@keyframes twinkle{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(.7) rotate(20deg)}}
-.sp{position:absolute;display:block;background:currentColor;clip-path:var(--star);animation:twinkle 3s ease-in-out infinite}
-.sp.s-in{position:static;display:inline-block;width:.34em;height:.34em;vertical-align:.62em;margin-left:.12em;color:#fff}
-.sp.s-small{width:.18em;height:.18em;vertical-align:.2em;margin-left:.04em;color:#ff5a73;animation-delay:1s}
-.photo-wrap{position:relative;flex:0 0 auto}
-section h2{position:relative}
-section h2::after{content:"";position:absolute;top:-10px;right:-28px;width:18px;height:18px;background:#c8102e;clip-path:var(--star);animation:twinkle 3s ease-in-out infinite}
-#contact h2::after{background:#fff}
-.box,.entry{position:relative}
-.box::after,.entry::after{content:"";position:absolute;top:10px;right:12px;width:16px;height:16px;background:#c8102e;clip-path:var(--star);opacity:0;transform:scale(0) rotate(-90deg);transition:opacity .25s,transform .35s}
-.box:hover::after,.entry:hover::after{opacity:1;transform:scale(1) rotate(0deg)}
-@media (prefers-reduced-motion: reduce){.sp,section h2::after{animation:none}}
-</style>
+<title>Ishwari Bomble – Resume</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="hero">
-     <div class="photo-wrap">
-    <!-- To use your own photo, replace the letter below with: <img src="your-photo.jpg" alt="Photo of Ishwari"> -->
-    <div class="photo"><img src="photo.jpeg" aria-label="Photo of Ishwari"></div>
-      <i class="sp" aria-hidden="true" style="width:28px;height:28px;top:-10px;right:-8px;color:#fff"></i>
-      <i class="sp" aria-hidden="true" style="width:16px;height:16px;top:26px;right:-26px;color:#ff5a73;animation-delay:.8s"></i>
-      <i class="sp" aria-hidden="true" style="width:18px;height:18px;bottom:8px;left:-18px;color:#ff5a73;animation-delay:1.5s"></i>
+    <div class="photo-wrap">
+      <div class="photo"><img src="photo.jpeg" alt="Photo of Ishwari Bomble"></div>
+      <i class="sp sp-a" aria-hidden="true"></i>
+      <i class="sp sp-b" aria-hidden="true"></i>
+      <i class="sp sp-c" aria-hidden="true"></i>
     </div>
     <div>
-     <h1>Ishwari Bomble<i class="sp s-in" aria-hidden="true"></i><i class="sp s-in s-small" aria-hidden="true"></i></h1>
+      <h1>Ishwari Bomble<i class="sp s-in" aria-hidden="true"></i><i class="sp s-in s-small" aria-hidden="true"></i></h1>
       <p>Motivated and curious college student who enjoys learning new skills, working in teams and turning ideas into results.</p>
     </div>
   </div>
@@ -159,13 +49,12 @@ section h2::after{content:"";position:absolute;top:-10px;right:-28px;width:18px;
         <span class="when">2026 – 2029</span>
         <h3>Bachelor’s Degree in Digital Business and Entrepreneurship</h3>
         <div class="where">Indian Institute of Management, Bangalore</div>
-        
       </div>
       <div class="entry">
         <span class="when">2026 – 2029</span>
         <h3>Bachelor’s Degree in E-commerce Operations</h3>
         <div class="where">Brihan Maharashtra College of Commerce, Pune</div>
-         </div>
+      </div>
       <div class="entry">
         <span class="when">2024 – 2026</span>
         <h3>Higher Secondary (Class XII)</h3>
@@ -180,7 +69,7 @@ section h2::after{content:"";position:absolute;top:-10px;right:-28px;width:18px;
     </div>
   </section>
 
-    <section id="skills">
+  <section id="skills">
     <div class="wrap">
       <h2>Skills</h2>
       <ul class="chips">
@@ -233,9 +122,9 @@ section h2::after{content:"";position:absolute;top:-10px;right:-28px;width:18px;
   <section id="languages">
     <div class="wrap">
       <h2>Languages</h2>
-     <div class="lang"><span>English</span><div class="bar"><span data-w="90%"></span></div><em>Fluent</em></div>
-<div class="lang"><span>Marathi</span><div class="bar"><span data-w="100%"></span></div><em>Native</em></div>
-<div class="lang"><span>Hindi</span><div class="bar"><span data-w="80%"></span></div><em>Proficient</em></div>
+      <div class="lang"><span>English</span><div class="bar"><span class="w90"></span></div><em>Fluent</em></div>
+      <div class="lang"><span>Marathi</span><div class="bar"><span class="w100"></span></div><em>Native</em></div>
+      <div class="lang"><span>Hindi</span><div class="bar"><span class="w80"></span></div><em>Proficient</em></div>
     </div>
   </section>
 
@@ -243,26 +132,17 @@ section h2::after{content:"";position:absolute;top:-10px;right:-28px;width:18px;
     <div class="wrap">
       <h2>Contact</h2>
       <ul class="contact-list">
-        <li><b>Email</b> <a href="mailto:ishwari@example.com">ishwaribomble13@gmail.com</a></li>
-         <li><b>LinkedIn</b> <a href="https://www.linkedin.com/in/ishwari-b-a7b364383/" target="_blank" rel="noopener">linkedin.com/in/ishwari-b-a7b364383</a></li>
+        <li><b>Email</b> <a href="mailto:ishwaribomble13@gmail.com">ishwaribomble13@gmail.com</a></li>
+        <li><b>LinkedIn</b> <a href="https://www.linkedin.com/in/ishwari-b-a7b364383/" target="_blank" rel="noopener">linkedin.com/in/ishwari-b-a7b364383</a></li>
       </ul>
       <p class="connect">Curious, creative, always learning. Let's connect!</p>
     </div>
   </section>
 </main>
 
-<footer>© Ishwari · Resume</footer>
+<footer>© Ishwari Bomble · Resume</footer>
 
-  <script>
-var bars = document.querySelectorAll('.bar span');
-var barObs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){ e.target.style.width = e.target.dataset.w; barObs.unobserve(e.target); }
-  });
-}, {threshold:.5});
-bars.forEach(function(b){ barObs.observe(b); });
-</script>
-   <div class="side-name" aria-hidden="true"><span>Ishwari Bomble</span></div>
+<div class="side-name" aria-hidden="true"><span>Ishwari Bomble</span></div>
 <div class="side-dots">
   <a href="#about" title="About me" aria-label="About me"></a>
   <a href="#education" title="Education" aria-label="Education"></a>
@@ -273,17 +153,5 @@ bars.forEach(function(b){ barObs.observe(b); });
   <a href="#contact" title="Contact" aria-label="Contact"></a>
 </div>
 
-<script>
-var dots = document.querySelectorAll('.side-dots a');
-var dotSecs = document.querySelectorAll('main section');
-var dotObs = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){
-      dots.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
-    }
-  });
-}, {rootMargin:'-45% 0px -50% 0px'});
-dotSecs.forEach(function(s){ dotObs.observe(s); });
-</script>
 </body>
 </html>
